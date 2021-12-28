@@ -1,0 +1,120 @@
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+@media only screen and (max-width: 600px) {
+    #background {
+        left: -60%;
+    }
+}
+
+.black {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0;
+}
+.blackanim{
+    animation: reveal 22s linear;
+}
+.text {
+    text-align: center;
+    font-size: 125%;
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    z-index: -1;
+}
+
+.to {
+    font-size: 100px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    animation: intro 5s linear;
+}
+
+.hide {
+    color: black;
+}
+
+.one {
+    top: -50%;
+    animation: remove 10s linear;
+}
+.two {
+    top: 50%;
+    animation: replace 10s linear;
+}
+
+@keyframes intro {
+    0% {top: 50%;color: black;}
+    40% {top: 50%;color: black;}
+    100% {top: 50%;color: white;}
+}
+@keyframes remove {
+    0% {top: 50%;color: black;}
+    50% {top: 50%;color: black;}
+    60% {top: 50%;color: white;}
+    70% {top: 50%;color: white;}
+    100% {top: -50%;}
+}
+@keyframes replace {
+    0% {top: 150%;}
+    70% {top: 150%;}
+    100% {top: 50%;}
+}
+
+@keyframes reveal {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    60% {opacity: 0.6;}
+    75% {opacity: 0.3;}
+    100% {opacity: 0;}
+}
+
+.cts {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: black;
+    padding: 1000px;
+    width: 100px;
+}
+
+.credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    font-size: 10px;
+    width: 300px;
+}
+a {color: blue;}
